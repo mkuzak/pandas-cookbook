@@ -91,6 +91,11 @@ you can find out about the id of the image, by checking
 docker images
 ```
 
+You can also run the container without HTTPS by providing a flag `-e USE_HTTP=1`
+```
+docker run -d -p 8888:8888 -e "PASSWORD=MakeAPassword" -e USE_HTTP=1 <IMAGE ID>
+```
+
 After starting the container, you can access ipython notebook with the cookbook
 on port 8888. Remember to use https and authenticate with `MakeAPassword`.
 ```
